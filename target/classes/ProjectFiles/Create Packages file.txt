@@ -1,0 +1,116 @@
+
+Create source Packeage---->Right Click on Java Resource-->create Source Package-->name as java-->Packages
+
+1)com.user.Module ---------------	This Package will Consist of Modules class with setter-getter methods
+2)com.user.DaoImpl---------------	This Package will Responcible to impliments Dao Interfaces. 
+3)com.user.Dao-------------------	Interfaces will create here.
+4)com.user.Service---------------	Create services class for generating Rest service
+5)com.user.Controller------------	Controller classes will take care of related classes and for generating services
+6)com.user.Main------------------	Run main class with Spring Security
+7)com.user.Daolayer--------------	Create DaoLayer class for seperating business logics without disturbing back-end classes.
+
+
+Maven Clean,Maven Install,Maven Built and then Maven test the project.
+
+-----------
+Maven Clean
+***********
+
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building N_Geo Maven Webapp 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ N_Geo ---
+[INFO] Deleting D:\Java_WorkPlace_Office\N_Geo\target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.297 s
+[INFO] Finished at: 2020-01-22T17:13:12+05:30
+[INFO] Final Memory: 6M/123M
+[INFO] ------------------------------------------------------------------------
+
+
+-------------
+Maven Install
+*************
+
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building N_Geo Maven Webapp 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ N_Geo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ N_Geo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ N_Geo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\Java_WorkPlace_Office\N_Geo\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ N_Geo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ N_Geo ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ N_Geo ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [N_Geo] in [D:\Java_WorkPlace_Office\N_Geo\target\N_Geo]
+[INFO] Processing war project
+[INFO] Copying webapp resources [D:\Java_WorkPlace_Office\N_Geo\src\main\webapp]
+[INFO] Webapp assembled in [200 msecs]
+[INFO] Building war: D:\Java_WorkPlace_Office\N_Geo\target\N_Geo.war
+[INFO] WEB-INF\web.xml already added, skipping
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ N_Geo ---
+[INFO] Installing D:\Java_WorkPlace_Office\N_Geo\target\N_Geo.war to C:\Users\suyash.shrivastava\.m2\repository\com\user\N_Geo\0.0.1-SNAPSHOT\N_Geo-0.0.1-SNAPSHOT.war
+[INFO] Installing D:\Java_WorkPlace_Office\N_Geo\pom.xml to C:\Users\suyash.shrivastava\.m2\repository\com\user\N_Geo\0.0.1-SNAPSHOT\N_Geo-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 11.109 s
+[INFO] Finished at: 2020-01-22T17:15:22+05:30
+[INFO] Final Memory: 9M/126M
+[INFO] ------------------------------------------------------------------------
+
+
+----------
+Maven Test
+**********
+
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building N_Geo Maven Webapp 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ N_Geo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ N_Geo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ N_Geo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\Java_WorkPlace_Office\N_Geo\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ N_Geo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ N_Geo ---
+[INFO] No tests to run.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 8.198 s
+[INFO] Finished at: 2020-01-22T17:17:41+05:30
+[INFO] Final Memory: 8M/123M
+[INFO] ------------------------------------------------------------------------

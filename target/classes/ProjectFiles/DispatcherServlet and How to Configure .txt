@@ -1,0 +1,61 @@
+1) To Run Application it has Dispatcher Servlet.
+2) What is Dispatcher Servlet..?
+3) How to configure Dispatcher Servlet..?
+
+
+*****************What is Dispatcher Servlet************************
+
+Dispatcher Servlet is responsible for creating the request process with configurable classes.
+it is inherited from {"javax.servlet.http.HttpServlet"}
+it is typically configured in the web.xml file.
+
+A web application can define any number of DispatcherServlet instance.
+
+Example)
+
+DispatcherServlet  ---- Each servlet will operate in its onw namesapce, loading its own application context with mapping handlers etc.
+DispatcherServlet ----- Using Spring Configuration class to discover the delegate components. it needs for request mapping, view resolution, exception handling.
+
+
+*******************What is ApplicationContext***********************
+ApplicationContext is creating the objects and association between objects.
+WebApplicationContext is an extension of a plain ApplicationContext.
+When DispatcherServlet is loaded it looks for bean configuration file of WebApplicationContext and intilize it.
+
+
+*******************How DispatcherServer uses WebApplicationContext*********
+In Spring-based application Objects live within "Object Container" This Container creates association between Objects and manage their life cycle.
+This Container Object are called managed beans Or beans and the Container is called application context via(ApplicationContext) in Spring Framework
+
+
+
+*****************How to Configure Dispatcher Servlet web.xml***************
+<web-app>
+	<listner>
+		<listner-class>org.springframework.web.context.ContextLoaderListner</listner-class>
+	</listner>
+
+	<context-pram>
+		<pram-name>contextConfiguration</pram-name>
+		<pram-value>/WEB-INF/dispatcher-servlet-context.xml</pram-value>
+	</context-pram>
+	
+	
+	<servlet>
+		<servlet-name>dispatcher-servlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-pram>
+			<pram-name>contextConfiguration</pram-name>
+			<pram-value></pram-value>
+		<init-pram>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mappng>
+		<servler-name>dispatcher-servlet</servlet-name>
+		<url-pattern>/*</url-pattern>
+	<servlet-mappng>
+
+</web-app>
+
+	
